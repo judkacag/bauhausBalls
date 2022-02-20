@@ -82,7 +82,7 @@ function draw() {
   push();
   fill(22.89, 89.4, 85.1, 85);
   ellipseMode(CORNER);
-  ellipse(width * noise(tOrange + 60), margin + rectHeight / 2, rectHeight / 2, rectHeight / 2)
+  ellipse( 40 + (width - 40) * noise(tOrange), margin + rectHeight / 2, rectHeight / 2, rectHeight / 2)
   tOrange += 0.01
   pop();
   // Top left white hole outlines
@@ -101,7 +101,7 @@ function draw() {
   push();
   fill(354, 17.7, 88.63, 85);
   ellipseMode(CORNER);
-  ellipse(width / 2, height  * noise(tPink + 60), rectWidth / 2, rectWidth / 2)
+  ellipse(width / 2, 40 + (height - 40)  * noise(tPink), rectWidth / 2, rectWidth / 2)
   tPink += 0.01;
   pop();
   // Top right hole outlines
