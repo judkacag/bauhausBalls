@@ -1,11 +1,12 @@
+// Variables
+
 let margin = 40;
 let rectWidth = 360;
 let rectHeight = 307;
 let corner = 1000;
-let t = 0;
-let t2 = 0;
-let t3 = 0;
-let t4 = 0;
+let tPink = 0;
+let tOrange = 0;
+let tGreen = 0;
 
 function setup() {
   createCanvas(800, 1000);
@@ -38,11 +39,15 @@ function draw() {
   // Bottom right black rect
   rect(margin + rectWidth/2, margin + rectHeight * 2, rectWidth + rectWidth/2, rectHeight, corner, 0, corner, corner)
   
+  //---------------------------------
+  
   // While holes
   
   fill(51.43, 2.86, 96.08, 100);
+  
   // Bottom white hole
   rect(width/2, margin + rectHeight * 2, rectWidth/2 + rectWidth / 4, rectHeight, 0, corner, corner, corner)
+  //Bottom white hole outlines
   push();
   noFill();
   stroke(360, 100, 0, 100);
@@ -55,11 +60,13 @@ function draw() {
   
   // Mid left white hole
   rect(margin + rectWidth* 0.4, margin + rectHeight, rectWidth / 2 + (rectWidth / 2 - rectWidth* 0.4), rectHeight, corner, 0, corner, corner)
+  // Green Ball
   push();
   fill(167.8, 55.29, 66.67, 85);
-  ellipse(width * noise (t3 + 100), margin + rectHeight + rectHeight / 2 + 40, rectWidth / 2.5, rectWidth / 2.5)
-  t3 += 0.01
+  ellipse(width * noise (tGreen + 100), margin + rectHeight + rectHeight / 2 + 40, rectWidth / 2.5, rectWidth / 2.5)
+  tGreen += 0.01
   pop();
+  // Mid left white hole outlines
   push();
   noFill();
   stroke(360, 100, 0, 100);
@@ -75,8 +82,8 @@ function draw() {
   push();
   fill(22.89, 89.4, 85.1, 85);
   ellipseMode(CORNER);
-  ellipse(width * noise(t2 + 60), margin + rectHeight / 2, rectHeight / 2, rectHeight / 2)
-  t2 += 0.01
+  ellipse(width * noise(tOrange + 60), margin + rectHeight / 2, rectHeight / 2, rectHeight / 2)
+  tOrange += 0.01
   pop();
   // Top left white hole outlines
   push();
@@ -90,12 +97,14 @@ function draw() {
   
   // Top right hole
   rect(width / 2, margin, rectWidth / 2, rectHeight, corner, corner, corner, 0)
+  // Pink ball
   push();
   fill(354, 17.7, 88.63, 85);
   ellipseMode(CORNER);
-  ellipse(width / 2, height * noise(t + 60), rectWidth / 2, rectWidth / 2)
-  t += 0.01;
+  ellipse(width / 2, height * noise(tPink + 60), rectWidth / 2, rectWidth / 2)
+  tPink += 0.01;
   pop();
+  // Top right hole outlines
   push();
   noFill();
   stroke(360, 100, 0, 100);
@@ -107,6 +116,7 @@ function draw() {
   
   // Mid right white hole
   circle(margin + rectWidth + rectWidth / 2, margin + rectHeight + rectHeight / 2, rectWidth * 0.75)
+  // Mid right white hole outlines
   push();
   noFill();
   stroke(360, 100, 0, 100);
