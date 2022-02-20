@@ -63,7 +63,7 @@ function draw() {
   // Green Ball
   push();
   fill(167.8, 55.29, 66.67, 85);
-  ellipse(width * noise (tGreen + 100), margin + rectHeight + rectHeight / 2 + 40, rectWidth / 2.5, rectWidth / 2.5)
+  ellipse(200 + width / 1.5 * noise (tGreen + 50), margin + rectHeight + rectHeight / 2 + 40, rectWidth / 2.5, rectWidth / 2.5)
   tGreen += 0.01
   pop();
   // Mid left white hole outlines
@@ -101,7 +101,7 @@ function draw() {
   push();
   fill(354, 17.7, 88.63, 85);
   ellipseMode(CORNER);
-  ellipse(width / 2, height * noise(tPink + 60), rectWidth / 2, rectWidth / 2)
+  ellipse(width / 2, height  * noise(tPink + 60), rectWidth / 2, rectWidth / 2)
   tPink += 0.01;
   pop();
   // Top right hole outlines
