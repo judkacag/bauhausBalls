@@ -134,3 +134,11 @@ function draw() {
   circle(720, 690, 30)
   
 }
+
+// Pressing the enter will download as png
+
+function keyPressed() {
+  if (keyCode === 13) {
+    saveCanvas('hideAndSeek' + frameCount, 'png');
+  }
+}
